@@ -1,0 +1,18 @@
+.info {
+    display: flex;
+    /* justify-content: space-around;
+    width: 500px; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.player {
+    border: 2px solid skyblue;
+    border-radius: 15px;
+    background-color: rgb(219, 245, 255);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
