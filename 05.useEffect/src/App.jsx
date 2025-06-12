@@ -1,6 +1,7 @@
 import "./App.css";
 import ChamChamCham from "./components/ChamChamCham";
 import Count from "./components/Count";
+import MovieList from "./components/MovieList";
 import Weather from "./components/Weather";
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
             {/* <ChamChamCham /> */}
 
             {/* useEffect 실습 3 */}
-            <Weather />
+            {/* <Weather /> */}
+
+            {/* useEffect 실습 4 */}
+            <MovieList />
         </>
     );
 }
