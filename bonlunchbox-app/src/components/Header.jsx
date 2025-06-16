@@ -1,9 +1,21 @@
 import React from "react";
 import { Link } from "react-router";
-const Header = () => {
+import { useNavigate } from "react-router";
+const Header = ({ authenticate, setAuthenticate }) => {
     // 로그인 버튼 클릭 시, 메인페이지로 이동하는 함수를 구현하시오.
     // 로그인 -> 로그아웃 텍스트 전환
     // 로그아웃 -> 로그인 텍스트로 전환
+
+    const navigate = useNavigate();
+
+    const goToLogin = () => {
+        navigate("/login");
+    };
+
+    const doLogout = () => {
+        setAuthenticate(false);
+        navigate("/");
+    };
 
     return (
         <div className="header-box">
@@ -26,7 +38,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="header-box-util">
-                <button>로그인</button>
+                {authenticate ? <button onClick={doLogout}>로그아웃</button> : <button onClick={goToLogin}>로그인</button>}
             </div>
         </div>
     );
