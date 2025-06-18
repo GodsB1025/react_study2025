@@ -6,8 +6,8 @@ const GoodsItem = ({ data }) => {
         <div className="goods-item" style={{ position: "relative" }}>
             <div className="goods-item-icon">
                 {/* 해당 상품이 new인지 best인지 조건부 렌더링을 통해 출력하시오. */}
-                {data.new ? <em className="goods-new">new</em> : <></>}
-                {data.best ? <em className="goods-best">best</em> : <></>}
+                {data.isNew ? <em className="goods-new">new</em> : <></>}
+                {data.isBest ? <em className="goods-best">best</em> : <></>}
             </div>
             <div className="goods-thumb">
                 {/* 

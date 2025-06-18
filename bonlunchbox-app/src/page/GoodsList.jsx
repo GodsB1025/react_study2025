@@ -9,9 +9,10 @@ const GoodsList = () => {
     const [goods, setGoods] = useState();
 
     const getGoodsList = async () => {
-        const GOODS_URL = "http://localhost:3000/goods_list";
+        const GOODS_URL = "http://localhost:8088/lunch/api/goods_list";
         const res = await axios.get(GOODS_URL);
         const data = res.data;
+        console.log(data);
 
         setGoods(data.map((item) => <GoodsItem data={item} key={item.id} />));
     };
