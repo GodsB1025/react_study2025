@@ -22,9 +22,9 @@ const GoodsDetail = () => {
         const URL = `http://localhost:8088/lunch/api/goods_list/${id}`;
         const res = await axios.get(URL);
         const data = res.data;
-        console.log(data[0]);
+        console.log(data);
 
-        setGood(data[0]);
+        setGood(data);
     };
 
     useEffect(() => {
